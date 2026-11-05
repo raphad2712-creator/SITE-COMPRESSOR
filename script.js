@@ -12,38 +12,20 @@ document.getElementById('year').textContent=new Date().getFullYear();
 
 (() => {
   const systemPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const toggle = document.querySelector('.motion-toggle');
   const running = new Set();
-  let savedPreference = null;
-  try { savedPreference = localStorage.getItem('comptec-motion'); } catch (_) {}
-  let enabled = savedPreference === null ? !systemPreference.matches : savedPreference === 'on';
 
   function syncMotion() {
-    const active = enabled && !systemPreference.matches;
-    document.documentElement.dataset.motion = active ? 'on' : 'off';
-    toggle.hidden = systemPreference.matches;
-    toggle.setAttribute('aria-pressed', String(!enabled));
-    toggle.setAttribute('aria-label', enabled ? 'Pausar animações' : 'Ativar animações');
-    toggle.querySelector('span').textContent = enabled ? 'Pausar animações' : 'Ativar animações';
-    if (!active) running.forEach(animation => animation.cancel());
+    document.documentElement.dataset.motion = systemPreference.matches ? 'off' : 'on';
+    if (systemPreference.matches) running.forEach(animation => animation.cancel());
   }
   function animate(element, frames, options) {
-    if (!enabled || systemPreference.matches || typeof element.animate !== 'function') return;
+    if (systemPreference.matches || typeof element.animate !== 'function') return;
     const animation = element.animate(frames, options);
     running.add(animation);
     animation.finished.then(() => running.delete(animation), () => running.delete(animation));
   }
   syncMotion();
-  toggle.addEventListener('click', () => {
-    enabled = !enabled;
-    savedPreference = enabled ? 'on' : 'off';
-    try { localStorage.setItem('comptec-motion', savedPreference); } catch (_) {}
-    syncMotion();
-  });
-  systemPreference.addEventListener('change', event => {
-    if (savedPreference === null) enabled = !event.matches;
-    syncMotion();
-  });
+  systemPreference.addEventListener('change', syncMotion);
 
   if ('IntersectionObserver' in window) {
     const reveal = new IntersectionObserver(entries => {
