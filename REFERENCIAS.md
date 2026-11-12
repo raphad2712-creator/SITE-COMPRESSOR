@@ -17,3 +17,10 @@ https://www.compteccompressores.com.br/ retornou HTTP 403 no navegador, na busca
 A logo original foi preservada. O fundo continua sendo a ilustração sem marcas aprovada anteriormente. As novas imagens dos serviços e categorias são ilustrações genéricas geradas para o projeto, identificadas na interface e sem representar instalações, equipe, modelos, marcas ou estoque específico da Comptec. Os arquivos originais das capturas foram preservados no histórico Git.
 
 A captura adicional enviada pelo usuário inclui o painel original Manutenção/Vendas/Locação e o mascote mecânico. O painel foi extraído sem redesenhar marcas ou equipamentos; o mascote foi isolado da interface para uso como atalho do WhatsApp.
+
+
+## Atualização de 12/11/2026
+- Contatos, endereço, atendimento no Sudeste e texto institucional fornecidos pelo cliente.
+- Identidade e ilustrações preparadas com base nas referências enviadas pelo cliente.
+- Logotipos das marcas obtidos dos sites oficiais: Atlas Copco, Schulz, Metalplan e Chiaperini.
+- Avaliações: acesso por busca no Google Maps; sem nota ou depoimentos reproduzidos, pois o perfil direto e os recortes ainda precisam ser fornecidos/confirmados.
