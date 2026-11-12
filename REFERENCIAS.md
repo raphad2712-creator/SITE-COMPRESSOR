@@ -23,4 +23,7 @@ A captura adicional enviada pelo usuário inclui o painel original Manutenção/
 - Contatos, endereço, atendimento no Sudeste e texto institucional fornecidos pelo cliente.
 - Identidade e ilustrações preparadas com base nas referências enviadas pelo cliente.
 - Logotipos das marcas obtidos dos sites oficiais: Atlas Copco, Schulz, Metalplan e Chiaperini.
-- Avaliações: acesso por busca no Google Maps; sem nota ou depoimentos reproduzidos, pois o perfil direto e os recortes ainda precisam ser fornecidos/confirmados.
+- Avaliações: perfil direto fornecido pelo usuário, consultado em 12/11/2026: nota 4,7/5 e 53 avaliações. Incluídos resumos identificados das avaliações de 5 estrelas de Alisson Santana, Carolina Cabral e Euzeli Franco, com acesso ao Google Maps.
+- Logo: tratamento de cores por CSS para integrar a marca ao fundo preto.
+- Movimento: entradas com opacidade, sem transformações em contêineres; cancelamento da transição anterior nas abas, remoção do zoom contínuo do fundo e pausa quando a página está oculta.
+- Emojis e setas decorativas removidos; menu com barras em CSS.
